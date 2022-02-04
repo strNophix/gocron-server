@@ -1,0 +1,12 @@
+# An example config that can be supplied to the CLI
+[server]
+host=":9092"
+
+[[unit]]
+name="echo"
+command="echo heyooo"
+cron="* * * * *"
+
+[[unit]]
+name="notify"
+command="notify-send heyooo"

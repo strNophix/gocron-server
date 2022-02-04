@@ -1,0 +1,23 @@
+syntax = "proto3";
+package gocron_server;
+
+option go_package = "github.com/strnophix/gocron-server;gocron_server";
+
+service Scheduler {
+    rpc RunJob(RunJobRequest) returns (RunJobResponse);
+    rpc ListenJobs(ListenJobRequest) returns (stream ListenJobResponse);
+}
+
+message RunJobRequest {
+    string UnitName = 1;
+    int64 RunAt = 10;
+}
+
+message RunJobResponse {}
+
+message ListenJobRequest {}
+
+message ListenJobResponse {
+    string JobName = 1;
+    string JobResult = 2;
+}
