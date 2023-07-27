@@ -1,5 +1,5 @@
 # gocron-server
-Small job scheduling server/library based on [gocron](https://github.com/go-co-op/gocron). Besides providing cron-functionality it also offers a gRPC API to manually trigger the jobs.
+Small job scheduling server/library based on [gocron](https://github.com/go-co-op/gocron). Besides providing cron-functionality it also offers a gRPC API to manually trigger/schedule jobs and listen for their completion.
 
 Sample config:
 ```toml
